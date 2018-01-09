@@ -11756,15 +11756,41 @@ before and during a Bioinformatics project. It is written using
 <a href="https://bitbucket.org/tutorials/markdowndemo">Markdown</a> which is
 simple mark-up language to produce a richer experience over a simple
 text file.</p>
-<h3 id="Installation">Installation<a class="anchor-link" href="#Installation">&#182;</a></h3><ol>
-<li>Create an SNIC user at <a href="https://supr.snic.se/person/register/new/?">https://supr.snic.se/person/register/new/?</a> this will allow you
+<h3 id="Setup">Setup<a class="anchor-link" href="#Setup">&#182;</a></h3><ol>
+<li><p>Create a SNIC user at <a href="https://supr.snic.se/person/register/new/?">https://supr.snic.se/person/register/new/?</a> this will allow you
 access to the SuperComputing Resources available to the
-group. Currently, around 300,000 core hours/month.
+group. Currently, around 300,000 core hours/month.</p>
+
 <pre><code>* When you have gotten the SUPR account apply to membership in all the projects: https://supr.snic.se/project/request/?search=wallner</code></pre>
 </li>
+<li><p>Create a <a href="http://github.com">github</a> account. Git is a version control system that enable you to keep track of changes to your code. No more: script.py, script_new.py, scrip_new2.py etc. Github is a cloud-based service that facilities the distribution and sharing of the code.</p>
+<ul>
+<li>[Learn git in 15 minutes, interactive learning] <a href="https://try.github.io/">https://try.github.io/</a> </li>
+<li>[10 minutes quick start to github] 
+<a href="https://guides.github.com/activities/hello-world/">https://guides.github.com/activities/hello-world/</a></li>
+</ul>
+</li>
+<li><p>Create a 'new repository' in your github account named 'exjobb'</p>
+<ul>
+<li>Copy the url of your newly created repo, e.g <a href="https://github.com/bjornwallner/exjobb">https://github.com/bjornwallner/exjobb</a> and send it to bjornw_AT_ifm.liu.se</li>
+</ul>
+</li>
+<li><p>Familiarize with <a href="https://jupyter.org">Jupyter Notebook</a> which is a notebook system that enables you to write code, run it and document it in an iteractive environment. It is strongly suggested that you use it.</p>
+<ul>
+<li>In a terminal you can make a local copy of your <code>exjobb</code> repo in github by the command: 
+<pre><code>git clone https://github.com/[REPLACE_WITH_GITHUB_USER]/exjobb</code></pre>
+This will download the contents of <code>exjobb</code> repo to the folder <code>exjobb/</code>, this first time it will be empty.<ul>
+<li>Change the folder: <code>cd exjobb</code></li>
+<li>Start the notebook with the following command: <code>jupyter notebook</code></li>
+<li>When you have created a few files you can do <code>git add &lt;filename&gt;</code> or <code>git add *</code> do put them under version control by git.</li>
+<li><code>git commit -a -m 'Initial commit'</code> will add the current changes to the repo with the message 'Initial commit'.</li>
+<li><code>git push</code> will upload all the changes to github. You can go to <a href="https://github.com/[REPLACE_WITH_GITHUB_USER]/exjobb">https://github.com/[REPLACE_WITH_GITHUB_USER]/exjobb</a> to check that it worked.</li>
+</ul>
+</li>
+</ul>
+</li>
 </ol>
-<h1 id="Learn-some-stuff">Learn some stuff<a class="anchor-link" href="#Learn-some-stuff">&#182;</a></h1><h3 id="Python">Python<a class="anchor-link" href="#Python">&#182;</a></h3><p>We are still using Python 2, mostly because it works and we have not seen any reason to move to Python 3.
-These quite old articles still hold:</p>
+<h1 id="Learn-some-stuff">Learn some stuff<a class="anchor-link" href="#Learn-some-stuff">&#182;</a></h1><h3 id="Python">Python<a class="anchor-link" href="#Python">&#182;</a></h3><p>We are still using Python 2, mostly because it works and we have not seen any reason to move to Python 3. These quite old articles still hold:</p>
 <ul>
 <li><a href="https://learntocodewith.me/programming/python/python-2-vs-python-3/">https://learntocodewith.me/programming/python/python-2-vs-python-3/</a></li>
 <li><a href="http://blog.thezerobit.com/2014/05/25/python-3-is-killing-python.html">http://blog.thezerobit.com/2014/05/25/python-3-is-killing-python.html</a></li>
@@ -11777,7 +11803,7 @@ These quite old articles still hold:</p>
 <ul>
 <li><a href="https://developers.google.com/edu/python/">https://developers.google.com/edu/python/</a></li>
 </ul>
-<h3 id="Specific-python-modules">Specific python modules<a class="anchor-link" href="#Specific-python-modules">&#182;</a></h3><p>Here is a list of the most common modules we are using. They can be installed using for instance:</p>
+<h3 id="Python-modules">Python modules<a class="anchor-link" href="#Python-modules">&#182;</a></h3><p>Here is a list of the most common modules we are using. They can be installed using for instance <code>pip</code>:</p>
 
 <pre><code>pip install scipy
 pip install scikit-learn
@@ -11788,13 +11814,12 @@ pip install seaborn</code></pre>
 <li>SciPy library - Fundamental library for scientific computing</li>
 <li>Matplotlib - Comprehensive 2D Plotting</li>
 <li>IPython - Enhanced Interactive Console</li>
-<li>Sympy - Symbolic mathematics</li>
 <li>pandas - Data structures &amp; analysis</li>
 </ul>
 <p><a href="http://scikit-learn.org/">scikit-learn</a> is the package we use to do machine learning.</p>
 <p><a href="http://scikit-learn.org/stable/tutorial/index.html">scikit-learn tutorials</a> contains an introduction to scikit-learn.</p>
+<p><a href="http://keras.io">keras</a> is the package we use for deep-learning</p>
 <p><a href="https://seaborn.pydata.org">seaborn</a> is used to produce publication grade plots with minimal effort.</p>
-<h3 id="Problems-and-comments">Problems and comments<a class="anchor-link" href="#Problems-and-comments">&#182;</a></h3><p>Send an email to bjornw_AT_ifm.liu.se</p>
 
 </div>
 </div>
@@ -11804,7 +11829,31 @@ pip install seaborn</code></pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Jupyter">Jupyter<a class="anchor-link" href="#Jupyter">&#182;</a></h3><p>Jupyter is a notebook system that enables you to write code, run it and document it in an iteractive environment. It is strongly suggesed that you use it.</p>
+<ul>
+<li><p>In a terminal you can make a local copy of your <code>exjobb</code> repo in github by the command:</p>
+
+<pre><code>git clone https://github.com/bjornwallner/exjobb</code></pre>
+<p>(replace with your url). This will download the contents of <code>exjobb</code> repo to the folder <code>exjobb/</code>, this first time it will be empty.</p>
+<ul>
+<li>Change the folder: <code>cd exjobb</code></li>
+<li>Start the notebook with the following command: <code>jupyter notebook</code></li>
+<li>When you have created a few files you can do <code>git add &lt;filename&gt;</code> or <code>git add *</code> do put them under version control by git.</li>
+<li><code>git commit -a -m 'Initial commit'</code> will add the current changes to the repo with the message 'Initial commit'.</li>
+<li><code>git push</code> will upload all the changes to github. You can go to <a href="https://github.com/[GITHUB_USER]/exjobb">https://github.com/[GITHUB_USER]/exjobb</a> to check that it worked.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Jupyter">Jupyter<a class="anchor-link" href="#Jupyter">&#182;</a></h3><p><a href="https://jupyter.org">Jupyter</a> is a notebook system that enables you to write code, run it and document it in an iteractive environment. It is strongly suggested that you use it.</p>
+<p><a href="https://svds.com/jupyter-notebook-best-practices-for-data-science/">https://svds.com/jupyter-notebook-best-practices-for-data-science/</a></p>
 <h4 id="securing-the-notebook">securing the notebook<a class="anchor-link" href="#securing-the-notebook">&#182;</a></h4><p>From: <a href="http://jupyter-notebook.readthedocs.io/en/stable/public_server.html#notebook-server-security">http://jupyter-notebook.readthedocs.io/en/stable/public_server.html#notebook-server-security</a></p>
 <p>First generate a config file you do not already have one.</p>
 
@@ -11852,12 +11901,37 @@ Verify password: ········
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="making-.py-and-.html-conversion-automatically-when-saving-the-notebook">making .py and .html conversion automatically when saving the notebook<a class="anchor-link" href="#making-.py-and-.html-conversion-automatically-when-saving-the-notebook">&#182;</a></h4><p>Reference: <a href="https://svds.com/jupyter-notebook-best-practices-for-data-science/">https://svds.com/jupyter-notebook-best-practices-for-data-science/</a></p>
+<p>Put the following at the top of <code>jupyter_notebook_config.py</code> file:</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">subprocess</span> <span class="kn">import</span> <span class="n">check_call</span>
+
+<span class="k">def</span> <span class="nf">post_save</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">os_path</span><span class="p">,</span> <span class="n">contents_manager</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;post-save hook for converting notebooks to .py scripts&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">model</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;notebook&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="c1"># only do this for notebooks</span>
+    <span class="n">d</span><span class="p">,</span> <span class="n">fname</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">os_path</span><span class="p">)</span>
+    <span class="n">check_call</span><span class="p">([</span><span class="s1">&#39;jupyter&#39;</span><span class="p">,</span> <span class="s1">&#39;nbconvert&#39;</span><span class="p">,</span> <span class="s1">&#39;--to&#39;</span><span class="p">,</span> <span class="s1">&#39;script&#39;</span><span class="p">,</span> <span class="n">fname</span><span class="p">],</span> <span class="n">cwd</span><span class="o">=</span><span class="n">d</span><span class="p">)</span>
+    <span class="n">check_call</span><span class="p">([</span><span class="s1">&#39;jupyter&#39;</span><span class="p">,</span> <span class="s1">&#39;nbconvert&#39;</span><span class="p">,</span> <span class="s1">&#39;--to&#39;</span><span class="p">,</span> <span class="s1">&#39;html&#39;</span><span class="p">,</span> <span class="n">fname</span><span class="p">],</span> <span class="n">cwd</span><span class="o">=</span><span class="n">d</span><span class="p">)</span>
+
+<span class="n">c</span><span class="o">.</span><span class="n">FileContentsManager</span><span class="o">.</span><span class="n">post_save_hook</span> <span class="o">=</span> <span class="n">post_save</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> notebook
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#Just testing some plotting...</span>
+<span class="o">%</span><span class="k">matplotlib</span> notebook
 
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
@@ -11887,10 +11961,10 @@ Verify password: ········
 
 
 
-<div id="572b89c3-21c7-47f7-a680-2ecc88c19472"></div>
+<div id="94fab0a1-b771-41ca-b4ca-44418a33de27"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#572b89c3-21c7-47f7-a680-2ecc88c19472');
+var element = $('#94fab0a1-b771-41ca-b4ca-44418a33de27');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
