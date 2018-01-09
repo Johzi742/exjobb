@@ -3,12 +3,7 @@
 
 # # Useful links, tutorials, and reads when starting a Bioinformatics project #
 # 
-# This simple page contain links to various sources that are good to know
-# before and during a Bioinformatics project. It is written using
-# [Markdown](https://bitbucket.org/tutorials/markdowndemo) which is
-# simple mark-up language to produce a richer experience over a simple
-# text file.
-# 
+# This simple page contain links to various sources that are good to know before and during a Bioinformatics project. It is written in [Jupyter Notebook](https://jupyter.org) which is a notebook system that enables you to write code, run it and document it in an iteractive environment. It is strongly suggested that you use it.
 # 
 # 
 # ### Setup ###
@@ -16,28 +11,40 @@
 # 1. Create a SNIC user at https://supr.snic.se/person/register/new/? this will allow you
 # access to the SuperComputing Resources available to the
 # group. Currently, around 300,000 core hours/month.
-#        * When you have gotten the SUPR account apply to membership in all the projects: https://supr.snic.se/project/request/?search=wallner
-#        
-# 2. Create a [github](http://github.com) account. Git is a version control system that enable you to keep track of changes to your code. No more: script.py, script_new.py, scrip_new2.py etc. Github is a cloud-based service that facilities the distribution and sharing of the code. 
+# 
+#     * When you have gotten the SUPR account apply to membership in all the projects: https://supr.snic.se/project/request/?search=wallner
+#     *
+# 
+# 2. Create a [github](http://github.com) account. Git is a version control system that enable you to keep track of changes to your code. No more: script.py, script_new.py, scrip_new2.py etc. Github is a cloud-based service that facilities the distribution and sharing of the code. The idea is that you should use git for your project, t
 # 
 #     * [Learn git in 15 minutes, interactive learning] https://try.github.io/ 
-#     * [10 minutes quick start to github] 
-#     https://guides.github.com/activities/hello-world/
+#     * [10 minutes quick start to github] https://guides.github.com/activities/hello-world/
 #     
 # 3. Create a 'new repository' in your github account named 'exjobb'
-#     * Copy the url of your newly created repo, e.g https://github.com/bjornwallner/exjobb and send it to bjornw_AT_ifm.liu.se
-#     
-# 4. Familiarize with [Jupyter Notebook](https://jupyter.org) which is a notebook system that enables you to write code, run it and document it in an iteractive environment. It is strongly suggested that you use it.
+#     * Choose to import from another repository
+#         * use the link https://github.com/bjornwallner/exjobb to import some initial files for you exjobb.
+#     * Copy the url of your newly created repo, e.g https://github.com/[REPLACE_WITH_GITHUB_USER]/exjobb and send it to bjornw_AT_ifm.liu.se
+# 
+# 4. Install [Anaconda](https://www.anaconda.com/download/) choose the Python 2.7 version. This will install a special version of Python that includes the Jupyter Notebook and basically all Python modules needed (deep-learning modules that has to be installed separately)
+# 
+# 5. Familiarize with [Jupyter Notebook](https://jupyter.org) using the following tutorial: https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook. 
+# 
+# 6. Creating your first 'exjobb' files:  
+# 
 #   * In a terminal you can make a local copy of your `exjobb` repo in github by the command: 
 # ```
 #     git clone https://github.com/[REPLACE_WITH_GITHUB_USER]/exjobb
 # ```
-#    This will download the contents of `exjobb` repo to the folder `exjobb/`, this first time it will be empty.
+#    This will download the contents of `exjobb` repo to the folder `exjobb/`
 #     * Change the folder: `cd exjobb`
-#     * Start the notebook with the following command: `jupyter notebook`
-#     * When you have created a few files you can do `git add <filename>` or `git add *` do put them under version control by git.
+#     * Start the notebook with the following command: `jupyter notebook wiki.ipynb`, which will open the notebook for this current document.
+#     * You can use this notebook to play around with what you can do. This is actually a good way to learn python interactively (See Jupyter heading below) 
+#         
+#     * When you have created new files that you want to add to the version control you can do `git add <filename>` or `git add *` do put them under version control by git.
 #     * `git commit -a -m 'Initial commit'` will add the current changes to the repo with the message 'Initial commit'.
 #     * `git push` will upload all the changes to github. You can go to https://github.com/[REPLACE_WITH_GITHUB_USER]/exjobb to check that it worked.
+#     
+#     
 # 
 # # Learn some stuff #
 # 
@@ -63,7 +70,7 @@
 # 
 # ###  Python modules ###
 # 
-# Here is a list of the most common modules we are using. They can be installed using for instance `pip`:
+# Here is a list of the most common modules we are using. They can be installed using for instance `pip`, but if you have installed Anaconda, you will have gotten most packages installed already, including the ones below.
 # 
 # ```
 # pip install scipy
@@ -85,23 +92,11 @@
 # 
 # [scikit-learn tutorials](http://scikit-learn.org/stable/tutorial/index.html) contains an introduction to scikit-learn. 
 # 
-# [keras](http://keras.io) is the package we use for deep-learning
+# [keras](http://keras.io) is the package we use for deep-learning (This is not part of anaconda)
 # 
 # [seaborn](https://seaborn.pydata.org) is used to produce publication grade plots with minimal effort.
 # 
 # 
-
-#    * In a terminal you can make a local copy of your `exjobb` repo in github by the command: 
-# ``` 
-#     git clone https://github.com/bjornwallner/exjobb
-# ```
-#     
-#     (replace with your url). This will download the contents of `exjobb` repo to the folder `exjobb/`, this first time it will be empty.
-#     * Change the folder: `cd exjobb`
-#     * Start the notebook with the following command: `jupyter notebook`
-#     * When you have created a few files you can do `git add <filename>` or `git add *` do put them under version control by git.
-#     * `git commit -a -m 'Initial commit'` will add the current changes to the repo with the message 'Initial commit'.
-#     * `git push` will upload all the changes to github. You can go to https://github.com/[GITHUB_USER]/exjobb to check that it worked.
 
 # 
 # ### Jupyter ###
@@ -110,7 +105,8 @@
 # https://svds.com/jupyter-notebook-best-practices-for-data-science/
 # 
 # #### securing the notebook ####
-# From: http://jupyter-notebook.readthedocs.io/en/stable/public_server.html#notebook-server-security
+# 
+# If you are running the notebook on a shared system, such as NSC. It is good that you secure it using a password and turn on encryption (https). Below is an extract from http://jupyter-notebook.readthedocs.io/en/stable/public_server.html#notebook-server-security on how to do that.
 # 
 # First generate a config file you do not already have one.
 # ```
@@ -119,7 +115,7 @@
 # ```
 # Prepare a hashed password using the following code:
 
-# In[8]:
+# In[ ]:
 
 from notebook.auth import passwd
 passwd()

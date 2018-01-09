@@ -11751,38 +11751,48 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Useful-links,-tutorials,-and-reads-when-starting-a-Bioinformatics-project">Useful links, tutorials, and reads when starting a Bioinformatics project<a class="anchor-link" href="#Useful-links,-tutorials,-and-reads-when-starting-a-Bioinformatics-project">&#182;</a></h1><p>This simple page contain links to various sources that are good to know
-before and during a Bioinformatics project. It is written using
-<a href="https://bitbucket.org/tutorials/markdowndemo">Markdown</a> which is
-simple mark-up language to produce a richer experience over a simple
-text file.</p>
+<h1 id="Useful-links,-tutorials,-and-reads-when-starting-a-Bioinformatics-project">Useful links, tutorials, and reads when starting a Bioinformatics project<a class="anchor-link" href="#Useful-links,-tutorials,-and-reads-when-starting-a-Bioinformatics-project">&#182;</a></h1><p>This simple page contain links to various sources that are good to know before and during a Bioinformatics project. It is written in <a href="https://jupyter.org">Jupyter Notebook</a> which is a notebook system that enables you to write code, run it and document it in an iteractive environment. It is strongly suggested that you use it.</p>
 <h3 id="Setup">Setup<a class="anchor-link" href="#Setup">&#182;</a></h3><ol>
 <li><p>Create a SNIC user at <a href="https://supr.snic.se/person/register/new/?">https://supr.snic.se/person/register/new/?</a> this will allow you
 access to the SuperComputing Resources available to the
 group. Currently, around 300,000 core hours/month.</p>
-
-<pre><code>* When you have gotten the SUPR account apply to membership in all the projects: https://supr.snic.se/project/request/?search=wallner</code></pre>
+<ul>
+<li>When you have gotten the SUPR account apply to membership in all the projects: <a href="https://supr.snic.se/project/request/?search=wallner">https://supr.snic.se/project/request/?search=wallner</a>
+*</li>
+</ul>
 </li>
-<li><p>Create a <a href="http://github.com">github</a> account. Git is a version control system that enable you to keep track of changes to your code. No more: script.py, script_new.py, scrip_new2.py etc. Github is a cloud-based service that facilities the distribution and sharing of the code.</p>
+<li><p>Create a <a href="http://github.com">github</a> account. Git is a version control system that enable you to keep track of changes to your code. No more: script.py, script_new.py, scrip_new2.py etc. Github is a cloud-based service that facilities the distribution and sharing of the code. The idea is that you should use git for your project, t</p>
 <ul>
 <li>[Learn git in 15 minutes, interactive learning] <a href="https://try.github.io/">https://try.github.io/</a> </li>
-<li>[10 minutes quick start to github] 
-<a href="https://guides.github.com/activities/hello-world/">https://guides.github.com/activities/hello-world/</a></li>
+<li>[10 minutes quick start to github] <a href="https://guides.github.com/activities/hello-world/">https://guides.github.com/activities/hello-world/</a></li>
 </ul>
 </li>
 <li><p>Create a 'new repository' in your github account named 'exjobb'</p>
 <ul>
-<li>Copy the url of your newly created repo, e.g <a href="https://github.com/bjornwallner/exjobb">https://github.com/bjornwallner/exjobb</a> and send it to bjornw_AT_ifm.liu.se</li>
+<li>Choose to import from another repository<ul>
+<li>use the link <a href="https://github.com/bjornwallner/exjobb">https://github.com/bjornwallner/exjobb</a> to import some initial files for you exjobb.</li>
 </ul>
 </li>
-<li><p>Familiarize with <a href="https://jupyter.org">Jupyter Notebook</a> which is a notebook system that enables you to write code, run it and document it in an iteractive environment. It is strongly suggested that you use it.</p>
+<li>Copy the url of your newly created repo, e.g <a href="https://github.com/[REPLACE_WITH_GITHUB_USER]/exjobb">https://github.com/[REPLACE_WITH_GITHUB_USER]/exjobb</a> and send it to bjornw_AT_ifm.liu.se</li>
+</ul>
+</li>
+<li><p>Install <a href="https://www.anaconda.com/download/">Anaconda</a> choose the Python 2.7 version. This will install a special version of Python that includes the Jupyter Notebook and basically all Python modules needed (deep-learning modules that has to be installed separately)</p>
+</li>
+<li><p>Familiarize with <a href="https://jupyter.org">Jupyter Notebook</a> using the following tutorial: <a href="https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook">https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook</a>.</p>
+</li>
+<li><p>Creating your first 'exjobb' files:</p>
 <ul>
-<li>In a terminal you can make a local copy of your <code>exjobb</code> repo in github by the command: 
+<li><p>In a terminal you can make a local copy of your <code>exjobb</code> repo in github by the command:</p>
+
 <pre><code>git clone https://github.com/[REPLACE_WITH_GITHUB_USER]/exjobb</code></pre>
-This will download the contents of <code>exjobb</code> repo to the folder <code>exjobb/</code>, this first time it will be empty.<ul>
+<p>This will download the contents of <code>exjobb</code> repo to the folder <code>exjobb/</code></p>
+<ul>
 <li>Change the folder: <code>cd exjobb</code></li>
-<li>Start the notebook with the following command: <code>jupyter notebook</code></li>
-<li>When you have created a few files you can do <code>git add &lt;filename&gt;</code> or <code>git add *</code> do put them under version control by git.</li>
+<li>Start the notebook with the following command: <code>jupyter notebook wiki.ipynb</code>, which will open the notebook for this current document.</li>
+<li><p>You can use this notebook to play around with what you can do. This is actually a good way to learn python interactively (See Jupyter heading below)</p>
+</li>
+<li><p>When you have created new files that you want to add to the version control you can do <code>git add &lt;filename&gt;</code> or <code>git add *</code> do put them under version control by git.</p>
+</li>
 <li><code>git commit -a -m 'Initial commit'</code> will add the current changes to the repo with the message 'Initial commit'.</li>
 <li><code>git push</code> will upload all the changes to github. You can go to <a href="https://github.com/[REPLACE_WITH_GITHUB_USER]/exjobb">https://github.com/[REPLACE_WITH_GITHUB_USER]/exjobb</a> to check that it worked.</li>
 </ul>
@@ -11803,7 +11813,7 @@ This will download the contents of <code>exjobb</code> repo to the folder <code>
 <ul>
 <li><a href="https://developers.google.com/edu/python/">https://developers.google.com/edu/python/</a></li>
 </ul>
-<h3 id="Python-modules">Python modules<a class="anchor-link" href="#Python-modules">&#182;</a></h3><p>Here is a list of the most common modules we are using. They can be installed using for instance <code>pip</code>:</p>
+<h3 id="Python-modules">Python modules<a class="anchor-link" href="#Python-modules">&#182;</a></h3><p>Here is a list of the most common modules we are using. They can be installed using for instance <code>pip</code>, but if you have installed Anaconda, you will have gotten most packages installed already, including the ones below.</p>
 
 <pre><code>pip install scipy
 pip install scikit-learn
@@ -11818,31 +11828,8 @@ pip install seaborn</code></pre>
 </ul>
 <p><a href="http://scikit-learn.org/">scikit-learn</a> is the package we use to do machine learning.</p>
 <p><a href="http://scikit-learn.org/stable/tutorial/index.html">scikit-learn tutorials</a> contains an introduction to scikit-learn.</p>
-<p><a href="http://keras.io">keras</a> is the package we use for deep-learning</p>
+<p><a href="http://keras.io">keras</a> is the package we use for deep-learning (This is not part of anaconda)</p>
 <p><a href="https://seaborn.pydata.org">seaborn</a> is used to produce publication grade plots with minimal effort.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li><p>In a terminal you can make a local copy of your <code>exjobb</code> repo in github by the command:</p>
-
-<pre><code>git clone https://github.com/bjornwallner/exjobb</code></pre>
-<p>(replace with your url). This will download the contents of <code>exjobb</code> repo to the folder <code>exjobb/</code>, this first time it will be empty.</p>
-<ul>
-<li>Change the folder: <code>cd exjobb</code></li>
-<li>Start the notebook with the following command: <code>jupyter notebook</code></li>
-<li>When you have created a few files you can do <code>git add &lt;filename&gt;</code> or <code>git add *</code> do put them under version control by git.</li>
-<li><code>git commit -a -m 'Initial commit'</code> will add the current changes to the repo with the message 'Initial commit'.</li>
-<li><code>git push</code> will upload all the changes to github. You can go to <a href="https://github.com/[GITHUB_USER]/exjobb">https://github.com/[GITHUB_USER]/exjobb</a> to check that it worked.</li>
-</ul>
-</li>
-</ul>
 
 </div>
 </div>
@@ -11854,7 +11841,7 @@ pip install seaborn</code></pre>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Jupyter">Jupyter<a class="anchor-link" href="#Jupyter">&#182;</a></h3><p><a href="https://jupyter.org">Jupyter</a> is a notebook system that enables you to write code, run it and document it in an iteractive environment. It is strongly suggested that you use it.</p>
 <p><a href="https://svds.com/jupyter-notebook-best-practices-for-data-science/">https://svds.com/jupyter-notebook-best-practices-for-data-science/</a></p>
-<h4 id="securing-the-notebook">securing the notebook<a class="anchor-link" href="#securing-the-notebook">&#182;</a></h4><p>From: <a href="http://jupyter-notebook.readthedocs.io/en/stable/public_server.html#notebook-server-security">http://jupyter-notebook.readthedocs.io/en/stable/public_server.html#notebook-server-security</a></p>
+<h4 id="securing-the-notebook">securing the notebook<a class="anchor-link" href="#securing-the-notebook">&#182;</a></h4><p>If you are running the notebook on a shared system, such as NSC. It is good that you secure it using a password and turn on encryption (https). Below is an extract from <a href="http://jupyter-notebook.readthedocs.io/en/stable/public_server.html#notebook-server-security">http://jupyter-notebook.readthedocs.io/en/stable/public_server.html#notebook-server-security</a> on how to do that.</p>
 <p>First generate a config file you do not already have one.</p>
 
 <pre><code>jupyter notebook --generate-config</code></pre>
@@ -11865,7 +11852,7 @@ pip install seaborn</code></pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">notebook.auth</span> <span class="kn">import</span> <span class="n">passwd</span>
@@ -11873,30 +11860,6 @@ pip install seaborn</code></pre>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Enter password: ········
-Verify password: ········
-</pre>
-</div>
-</div>
-
-<div class="output_area"><div class="prompt output_prompt">Out[8]:</div>
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;sha1:0c9e8d6a2381:46fb8d9d59e1d06b8bd105ddb96b6c03924ff20b&#39;</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -11961,10 +11924,10 @@ Verify password: ········
 
 
 
-<div id="94fab0a1-b771-41ca-b4ca-44418a33de27"></div>
+<div id="3f8004a7-5988-4bfc-8753-4daabbe1e1b4"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#94fab0a1-b771-41ca-b4ca-44418a33de27');
+var element = $('#3f8004a7-5988-4bfc-8753-4daabbe1e1b4');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
