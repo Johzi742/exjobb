@@ -8,13 +8,11 @@
 # 
 # ### Setup ###
 # 
-# 1. Create a SNIC user at https://supr.snic.se/person/register/new/? this will allow you
-# access to the SuperComputing Resources available to the
+# 1. Create a SNIC user at https://supr.snic.se/ if you have LiU account should be able to login using SWAMID. If that does not work register a new person at https://supr.snic.se/person/register/new/?.
+# This will allow you access to the SuperComputing Resources available to the
 # group. Currently, around 300,000 core hours/month.
-# 
 #     * When you have gotten the SUPR account apply to membership in all the projects: https://supr.snic.se/project/request/?search=wallner
-#     *
-# 
+#         
 # 2. Create a [github](http://github.com) account. Git is a version control system that enable you to keep track of changes to your code. No more: script.py, script_new.py, scrip_new2.py etc. Github is a cloud-based service that facilities the distribution and sharing of the code. The idea is that you should use git for your project, t
 # 
 #     * [Learn git in 15 minutes, interactive learning] https://try.github.io/ 
@@ -54,11 +52,17 @@
 # 
 # 
 # 
-# We are still using Python 2, mostly because it works and we have not seen any reason to move to Python 3. These quite old articles still hold:
+# We are still using mostly Python 2, but for some of the deep learning application we are using Python 3. Main difference between the the two is the print statement:
+# ```python
+# #!/usr/bin/python2
+# print 'Hello World!'
+# ```
 # 
-# * https://learntocodewith.me/programming/python/python-2-vs-python-3/
-# * http://blog.thezerobit.com/2014/05/25/python-3-is-killing-python.html
+# ```python
+# #!/usr/bin/python3
+# print('Hello World!')
 # 
+# ```
 # Code Academy is good place to learn python interactively. 
 # 
 # * https://www.codecademy.com/learn/learn-python
@@ -70,7 +74,7 @@
 # 
 # ###  Python modules ###
 # 
-# Here is a list of the most common modules we are using. They can be installed using for instance `pip`, but if you have installed Anaconda, you will have gotten most packages installed already, including the ones below.
+# Here is a list of the most common modules we are using. They can be installed using for instance `pip` or `conda`, but if you have installed Anaconda, you will have gotten most packages installed already, including the ones below.
 # 
 # ```
 # pip install scipy
@@ -97,6 +101,11 @@
 # [seaborn](https://seaborn.pydata.org) is used to produce publication grade plots with minimal effort.
 # 
 # 
+
+# In[ ]:
+
+
+
 
 # 
 # ### Jupyter ###
@@ -142,7 +151,9 @@ passwd()
 # c.FileContentsManager.post_save_hook = post_save
 # ```
 
-# In[2]:
+# Below is test of using running some plotting using the notebook, you can run a cell with shift+enter
+
+# In[5]:
 
 #Just testing some plotting...
 get_ipython().magic(u'matplotlib notebook')
@@ -161,4 +172,9 @@ df = pd.DataFrame(np.random.randn(1000, 4), index=ts.index,
                   columns=['Asdfd', 'B', 'C', 'D'])
 df = df.cumsum()
 df.plot(); plt.legend(loc='best')
+
+
+# In[ ]:
+
+
 
